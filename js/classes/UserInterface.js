@@ -31,7 +31,7 @@ class UserInterface {
         } else {
             budgetValue.classList.remove("advertisement");
         }
-        budgetValue.textContent = `$${Intl.NumberFormat().format(value)}`;
+        budgetValue.textContent = `$${Intl.NumberFormat("es-ES").format(value)}`;
     }
 
     showAddForm(e, type) {
