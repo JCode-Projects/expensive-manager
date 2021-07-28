@@ -90,7 +90,7 @@ class UserInterface {
             <div class="content">
                 <h3 class="concept">${description}</h3>
                 <p class="date">Date: <span>${date}</span></p>
-                <p class="value">Value: <span>$${Intl.NumberFormat().format(value)}</span></p>
+                <p class="value">Value: <span>$${Intl.NumberFormat("es-ES").format(value)}</span></p>
             </div>
             <div class="delete">
                 <em data-id="${id}" class="fas fa-trash"></em>
