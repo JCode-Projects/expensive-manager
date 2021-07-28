@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: #001629;
+    font-family: "Montserrat", sans-serif;
+}
+
+input {
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.advertisement {
+    color: #ff0033;
+}
+
+.alert {
+    position: absolute;
+    top: -20rem;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 10;
+    height: max-content;
+    max-width: 40rem;
+    border-radius: 0 0 .5rem .5rem;
+    text-align: center;
+    padding: 2rem;
+    color: #fff;
+    font-weight: bold;
+    transition: top .5s ease-in-out, background-color .5s ease-in-out;
+}
+
+.alert-error {
+    top: 0;
+    background-color: #dc143c;
+}
+
+.alert-success {
+    top: 0;
+    background-color: #0dda0d;
+}
+
+.section-container {
+    margin: 2rem auto 0 auto; 
+    width: min(50rem, 80%);
+}
+
+.header-app {
+    background-color: #0d375c;
+    color: #fff;
+    padding: 2rem 1rem;
+}
+
+.header-app nav {
+    text-align: center;
+}
+
+.header-app nav h1 {
+    text-transform: uppercase;
+}
+
+.header-app nav h1 span {
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.header-app nav h1 em {
+    margin-right: 1rem;
+}
+
+.header-app .menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    transition: color .5s ease-in-out;
+    display: block;
+    margin-top: 2rem;
+}
+
+.header-app .menu a:hover {
+    color: #62ff5d;
+}
+
+@media (min-width: 400px) {
+    .header-app nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-app .menu a {
+        margin-top: 0;
+    }
+}
+
+.question-budget {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: rgba(33, 41, 48, 0.527);
+}
+
+.container-question {
+    margin: 0 1rem;
+    padding: 3rem 2rem;
+    background-color: #0d375c;
+}
+
+.container-question h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+}
+
+.form input[type="number"] {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: none;
+    outline: unset;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.7rem;
+}
+
+.form input[type="submit"],
+.form button[type="button"] {
+    font-family: "Montserrat", sans-serif;
+    display: block;
+    padding: 1rem 2rem;
+    margin: 2rem auto 0 auto;
+    background-color: rgb(17, 140, 223);
+    border: none;
+    color: #fff;
+    border-radius: .5rem;
+}
+
+.form input[type="submit"]:hover {
+    cursor: pointer;
+}
+.form button[type="button"] {
+    background-color: #dc143c;
+}
+
+.badged-value {
+    color: #fff;
+    background-color: #0d375c88;
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badged-value em {
+    font-size: 3rem;
+    margin-right: 1rem;
+}
+
+.badged-value p {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.badged-value p span {
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+@media (min-width: 500px) {
+    .badged-value em {
+        font-size: 4rem;
+        margin-right: 1rem;
+    }
+    
+    .badged-value p {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    
+    .badged-value p span {
+        font-weight: 800;
+        font-size: 4rem;
+    }
+}
+
+.options {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.options a {
+    flex-basis: calc((100% / 2) - 3rem);
+    padding: 1rem;
+    border-radius: .5rem;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .1s ease-in-out;
+}
+
+.options a:hover {
+    transform: scale(1.05);
+}
+
+.options a em {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+}
+
+.options .income {
+    background-color: #0dda0d;
+}
+
+.options .expense {
+    background-color: #dc143c;
+}
+
+.list-elements {
+    margin-bottom: 3rem;
+}
+
+.list-elements h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.list-elements .element {
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    justify-content: center;
+    text-align: center;
+    column-gap: 1rem;
+    align-items: center;
+    color: #fff;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+}
+
+@media (min-width: 550px) {
+    .list-elements .element {
+        display: grid;
+        grid-template-columns: max-content 1fr max-content;
+        column-gap: 1rem;
+        align-items: center;
+        color: #fff;
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        border-radius: .5rem;
+        text-align-last: left;
+    }
+}
+
+.list-elements .element.income {
+    background-color: rgba(13, 218, 13, 0.1);
+}
+
+.list-elements .element.expense {
+    background-color: rgba(220, 20, 60, 0.1);
+}
+
+.list-elements .element .icon em {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+}
+
+.list-elements .element .content p {
+    font-weight: 700;
+    margin-top: .5rem;
+}
+
+.list-elements .element .content p span {
+    font-weight: 300;
+}
+
+.list-elements .element .delete em {
+    font-size: 2rem;
+    background-color: #dc143c;
+    padding: 1rem;
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    display: grid;
+    place-items: center;
+    transition: background-color .1s ease-in-out;
+    margin: 2rem auto 0 auto;
+}
+
+@media (min-width: 550px) {
+    .list-elements .element .delete em {
+        margin: 0;
+    }
+
+    .list-elements .element .icon em {
+        font-size: 3rem;
+        margin: 0;
+    }
+}
+
+.list-elements .element .delete em:hover {
+    background-color: #ff0033;
+    cursor: pointer;
+}
+
+.empty-list {
+    margin-top: 3rem;
+    text-align: center;
+    color: #fff;
+}
+
+.empty-list em {
+    font-size: 10rem;
+}
+
+.empty-list h3 {
+    font-weight: 300;
+    margin-top: 1rem;
+}
+
+.add-element {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: rgba(33, 41, 48, 0.527);
+}
+
+.add-element .form .field {
+    margin-top: 2rem;
+    width: max-content;
+    width: 100%;
+}
+
+.add-element .form .field label {
+    color: #fff;
+}
+
+.add-element .form .field input {
+    display: block;
+    width: 100%;
+    margin: .5rem 0;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: none;
+    outline: unset;
+    text-align: center;
+    font-weight: 400;
+    font-size: 2rem;
+}

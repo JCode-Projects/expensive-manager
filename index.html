@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header-app">
+        <nav class="container">
+            <h1><em class="fas fa-coins"></em>Expense<span>Asistant</span></h1>
+            <div class="menu">
+                <a href="#" class="icon-option">Change Budget</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="badged-value section-container">
+            <em class="fas fa-cash-register"></em>
+            <p><span id="budget"></span> Your budget</p>
+        </div>
+        <div class="options section-container">
+            <a href="#" class="income"><em class="far fa-plus-square"></em>Add Income</a>
+            <a href="#" class="expense"><em class="far fa-minus-square"></em>Add Expense</a>
+        </div>
+        <div class="list-elements section-container">
+            <h2>List of Expenses or Income</h2>
+        </div>
+    </main>
+
+    <div class="add-element d-none">
+        <div class="question-add-element container-question">
+            <h2 id="title">What was your income?</h2>
+            <form class="form">
+                <div class="field">
+                    <label for="concept">Description: </label>
+                    <input type="text" id="concept">
+                </div>
+                <div class="field">
+                    <label for="value">Value: </label>
+                    <input type="number" id="value">
+                </div>
+                <div class="options">
+                    <button type="button" id="cancel">Cancel</button>
+                    <input type="submit" value="Add">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="question-budget">
+        <div class="container-question">
+            <h2>What is your budget?</h2>
+            <form action="#" class="form">
+                <input type="number" id="budget" placeholder="Your budget.">
+                <input type="submit" value="Accept">
+            </form>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/4a44549445.js" crossorigin="anonymous"></script>
+    <script src="js/app.js" type="module"></script>
+</body>
+</html>
